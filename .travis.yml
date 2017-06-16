@@ -68,7 +68,6 @@ before_script:
   - rm ./config/app.php
   - cp ./vendor/$COMPOSER_NAME/$GITHUB_PACKAGE/tests/app.php ./config # set Package Service Provider(s)
   - php artisan vendor:publish
-  - mysql -u root -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('')"
   - mysql -e "create database IF NOT EXISTS test;" -uroot
   #- php artisan migrate --seed #setups the migrations and seeding
   - php -r 'echo __DIR__ . "\n";print_r(scandir(__DIR__));print_r(scandir(__DIR__ . "/vendor"));'
