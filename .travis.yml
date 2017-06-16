@@ -53,7 +53,7 @@ matrix:
 
 before_script:
   - export GITHUB_NAME=ByteNet-Serbia
-  - export GITHUB_PACKAGE=laravel-test
+  - export GITHUB_PACKAGE=laravel-test1
   - export COMPOSER_NAME=bytenet
   - export COMPOSER_PACKAGE=$GITHUB_PACKAGE
   - composer self-update
@@ -65,7 +65,7 @@ before_script:
   - composer update
   - rm ./.env
   - php -r 'echo __DIR__ . "\n";print_r(scandir(__DIR__));print_r(scandir(__DIR__ . "/vendor"));'
-  - php -r 'print_r(scandir(__DIR__ . "/vendor/bytenet/laravel-test"));print_r(scandir(__DIR__ . "/vendor/bytenet/laravel-test/tests"));'
+  - php -r 'print_r(scandir(__DIR__ . "/vendor/bytenet/laravel-test1"));print_r(scandir(__DIR__ . "/vendor/bytenet/laravel-test/tests1"));'
   #- cp ./vendor/$COMPOSER_NAME/$GITHUB_PACKAGE/tests/.env ./.env # set specific testing values
   #- rm ./config/app.php
   #- cp ./vendor/$COMPOSER_NAME/$GITHUB_PACKAGE/tests/app.php ./config # set Package Service Provider(s)
