@@ -50,7 +50,7 @@ matrix:
 
 before_script:
   - export GITHUB_NAME=ByteNet-Serbia
-  - export GITHUB_PACKAGE=laravel-base
+  - export GITHUB_PACKAGE=laravel-test
   - export COMPOSER_NAME=bytenet
   - export COMPOSER_PACKAGE=$GITHUB_PACKAGE
   - composer self-update
