@@ -55,10 +55,8 @@ before_script:
   - export COMPOSER_PACKAGE=$GITHUB_PACKAGE
   - composer self-update
   #- composer create-project laravel/laravel
-  #- composer create-project --prefer-dist laravel/laravel laravel
-  - mkdir laravel
+  - composer create-project --prefer-dist laravel/laravel laravel
   - cd ./laravel
-  - echo {} > composer.json
   - composer config repositories.$COMPOSER_NAME vcs https://github.com/$GITHUB_NAME/$GITHUB_PACKAGE.git
   - composer require $COMPOSER_NAME/$GITHUB_PACKAGE dev-master
   - composer update
