@@ -64,7 +64,7 @@ before_script:
   - composer update
   #- rm ./.env
   - php -r 'echo __DIR__ . "\n";print_r(scandir(__DIR__));print_r(scandir(__DIR__ . "/vendor"));'
-  - php -r 'print_r(scandir(__DIR__ . "/vendor/bytenet/laravel-base"));print_r(scandir(__DIR__ . "/vendor/bytenet/laravel-base/tests"));'
+  - php -r 'print_r(scandir(__DIR__ . "/vendor/bytenet/laravel-test"));print_r(scandir(__DIR__ . "/vendor/bytenet/laravel-test/tests"));'
   #- cp ./vendor/$COMPOSER_NAME/$GITHUB_PACKAGE/tests/.env ./.env # set specific testing values
   #- rm ./config/app.php
   #- cp ./vendor/$COMPOSER_NAME/$GITHUB_PACKAGE/tests/app.php ./config # set Package Service Provider(s)
