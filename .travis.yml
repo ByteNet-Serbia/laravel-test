@@ -63,6 +63,7 @@ before_script:
   - composer create-project --prefer-dist laravel/laravel laravel
   - cd ./laravel
   - composer config repositories.$COMPOSER_NAME vcs https://github.com/$GITHUB_NAME/$GITHUB_PACKAGE.git
+  - cat composer.json
   - composer require $COMPOSER_NAME/$GITHUB_PACKAGE dev-master
   - composer update
   - rm ./.env
