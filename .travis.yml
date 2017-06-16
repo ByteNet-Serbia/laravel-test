@@ -16,12 +16,12 @@ php:
 
 matrix:
   fast_finish: true
-#  allow_failures:
-#    - php: hhvm
+  allow_failures:
+    - php: hhvm
 
-#cache:
-#  directories:
-#    - laravel
+cache:
+  directories:
+    - laravel
 
 services: mysql
 
@@ -44,9 +44,9 @@ services: mysql
   #- curl -s https://raw.githubusercontent.com/kevupton/docker-laravel-tests/master/setup.sh | bash
 
 before_install:
+#  - mysql --version
 #  - mysql -u root -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('')"
   - mysql -e "create database IF NOT EXISTS test;" -uroot
-  - mysql --version
 
 #before_script:
 #  - cp .env.travis .env
