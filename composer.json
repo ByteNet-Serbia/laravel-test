@@ -1,5 +1,5 @@
 {
-    "name": "bytenet/laravel-test",
+    "name": "bytenet/laravel-test1",
     "type": "library",
     "description": "ByteNET Laravel Test package, for testing purposes",
     "keywords": [
@@ -8,7 +8,7 @@
         "dashboard",
         "base"
     ],
-    "homepage": "https://github.com/ByteNet-Serbia/laravel-test",
+    "homepage": "https://github.com/ByteNet-Serbia/laravel-test1",
     "license": "MIT",
     "authors": [
         {
