@@ -43,8 +43,8 @@ services: mysql
   #run the setup script
   #- curl -s https://raw.githubusercontent.com/kevupton/docker-laravel-tests/master/setup.sh | bash
 
-before_install:
-  - mysql -u root -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('')"
+#before_install:
+#  - mysql -u root -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('')"
 
 #before_script:
 #  - cp .env.travis .env
