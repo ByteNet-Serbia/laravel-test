@@ -59,7 +59,7 @@ before_script:
   #- cd ./laravel
   - composer config repositories.$COMPOSER_NAME vcs https://github.com/$GITHUB_NAME/$GITHUB_PACKAGE.git
   - composer require $COMPOSER_NAME/$GITHUB_PACKAGE dev-master
-  - php -r 'echo $COMPOSER_NAME;'
+  - php -r 'echo COMPOSER_NAME;'
   #- composer update
   #- rm ./.env
   #- php -r 'echo __DIR__ . "\n";print_r(scandir(__DIR__ . "/vendor/$COMPOSER_NAME/$GITHUB_PACKAGE"));print_r(scandir(__DIR__ . "/vendor/$COMPOSER_NAME/$GITHUB_PACKAGE/tests"));'
