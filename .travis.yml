@@ -24,7 +24,7 @@ matrix:
 #  directories:
 #    - laravel
 
-#services: mysql
+services: mysql
 
 #mysql:
 #  database: bytenet2_test_db
