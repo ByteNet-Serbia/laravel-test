@@ -60,17 +60,17 @@ before_script:
   #- composer create-project laravel/laravel
   - composer create-project --prefer-dist laravel/laravel laravel
   - cd ./laravel
-  - composer config repositories.$COMPOSER_NAME vcs https://github.com/$GITHUB_NAME/$GITHUB_PACKAGE.git
-  - composer require $COMPOSER_NAME/$GITHUB_PACKAGE dev-master
+  #- composer config repositories.$COMPOSER_NAME vcs https://github.com/$GITHUB_NAME/$GITHUB_PACKAGE.git
+  #- composer require $COMPOSER_NAME/$GITHUB_PACKAGE dev-master
   - composer update
   - rm ./.env
-  #- php -r 'echo __DIR__ . "\n";print_r(scandir(__DIR__));print_r(scandir(__DIR__ . "/vendor"));'
-  #- php -r 'print_r(scandir(__DIR__ . "/vendor/bytenet/laravel-test"));print_r(scandir(__DIR__ . "/vendor/bytenet/laravel-test/tests"));'
-  - cp ./vendor/$COMPOSER_NAME/$GITHUB_PACKAGE/tests/.env ./.env # set specific testing values
-  - rm ./config/app.php
-  - cp ./vendor/$COMPOSER_NAME/$GITHUB_PACKAGE/tests/app.php ./config # set Package Service Provider(s)
-  - php artisan vendor:publish
-  - mysql -e "create database IF NOT EXISTS test;" -uroot
+  - php -r 'echo __DIR__ . "\n";print_r(scandir(__DIR__));print_r(scandir(__DIR__ . "/vendor"));'
+  - php -r 'print_r(scandir(__DIR__ . "/vendor/bytenet/laravel-test"));print_r(scandir(__DIR__ . "/vendor/bytenet/laravel-test/tests"));'
+  #- cp ./vendor/$COMPOSER_NAME/$GITHUB_PACKAGE/tests/.env ./.env # set specific testing values
+  #- rm ./config/app.php
+  #- cp ./vendor/$COMPOSER_NAME/$GITHUB_PACKAGE/tests/app.php ./config # set Package Service Provider(s)
+  #- php artisan vendor:publish
+  #- mysql -e "create database IF NOT EXISTS test;" -uroot
   #- php artisan migrate --seed #setups the migrations and seeding
   - php artisan migrate
 
