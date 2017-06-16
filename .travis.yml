@@ -69,6 +69,8 @@ before_script:
   - cp ./vendor/$COMPOSER_NAME/$GITHUB_PACKAGE/tests/.env ./.env # set specific testing values
   - rm ./config/app.php
   - cp ./vendor/$COMPOSER_NAME/$GITHUB_PACKAGE/tests/app.php ./config # set Package Service Provider(s)
+  - rm ./app/Providers/AppServiceProvider.php
+  - cp ./vendor/$COMPOSER_NAME/$GITHUB_PACKAGE/tests/AppServiceProvider.php ./app/Providers/ # set solution for MySQL < 5.7.7 (https://laravel-news.com/laravel-5-4-key-too-long-error)
   - php artisan vendor:publish
   - mysql -e "create database IF NOT EXISTS test;" -uroot
   #- php artisan migrate --seed #setups the migrations and seeding
