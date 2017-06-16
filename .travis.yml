@@ -1,5 +1,6 @@
 dist: trusty
 #sudo: required
+sudo: false
 
 language: php
 
@@ -12,8 +13,6 @@ php:
   - '7.1'
 #  - hhvm
 #  - nightly
-
-sudo: false
 
 matrix:
   fast_finish: true
@@ -43,6 +42,9 @@ services: mysql
   #- export PACKAGE_NAME=bytenet/laravel-admin-base
   #run the setup script
   #- curl -s https://raw.githubusercontent.com/kevupton/docker-laravel-tests/master/setup.sh | bash
+
+before_install:
+  - mysql -u root -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('')"
 
 #before_script:
 #  - cp .env.travis .env
