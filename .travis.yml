@@ -77,6 +77,7 @@ before_script:
   #- php -r 'echo __DIR__ . "\n";print_r(scandir(__DIR__));print_r(scandir(__DIR__ . "/vendor"));'
   #- php -r 'print_r(scandir(__DIR__ . "/vendor/bytenet/laravel-test1"));print_r(scandir(__DIR__ . "/vendor/bytenet/laravel-test1/tests"));'
   - php artisan migrate
+  - mysql --version
 
 #script: phpunit tests/*
 script:
