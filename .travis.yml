@@ -64,7 +64,7 @@ before_script:
   - cd ./laravel
   - composer config repositories.$COMPOSER_NAME vcs https://github.com/$GITHUB_NAME/$GITHUB_PACKAGE.git
   - cat composer.json
-  - composer install $COMPOSER_NAME/$GITHUB_PACKAGE dev-master
+  - composer require $COMPOSER_NAME/$GITHUB_PACKAGE dev-master
   - composer update
   - rm ./.env
   - cp ./vendor/$COMPOSER_NAME/$GITHUB_PACKAGE/tests/.env ./.env # set specific testing values
